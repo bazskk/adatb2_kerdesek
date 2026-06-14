@@ -896,11 +896,10 @@ Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
   - Új sorok beszúrásánál
   - Tranzakciók a sorok lockolására.
 
-## 137. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek c) kiértékelésénél (középső ténytáblához indexek alapján kapcsoljuk a dimenziótáblákat) milyen költségek összege lesz a teljes költség, és mennyi a teljes költség? (4 pont)
-
-- Q beolvasása B plusz
-- Q és S olvasása R minden sorára: T*(B/I + B/I) plusz
-- A teljes output kiírása: 3T<sup>2</sup> B/I<sup>2</sup>
+## 137. Hogyan kezeli az Oracle a blokknál hosszabb rekordokat? (2 pont)
+- 02_fizika.pdf 36. oldal
+- A blokknál eredetileg is hosszabb rekordokat láncolva tárolja.
+- Ha módosítás hatására nő túl a blokkon az adat, akkor a motor migrálja a sort. Ekkor a `ROWID` ugyanaz marad, az adat egy új, nagyobb blokkba kerül, a régi blokk viszont megmarad, és egy pointer kerül bele az új blokkra.
 
 ## 138. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek c) és b) kiértékelésének költségei hogy aránylanak egymáshoz, és milyen feltétel szükséges ehhez? (2 pont)
 
