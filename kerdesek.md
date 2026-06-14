@@ -908,6 +908,34 @@ Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
 - Mindig kell legyen egy `SYSTEM` és egy `SYSAUX` táblatér, illetve opcionálisan egy `TEMP` is
 - Egy táblatér lehet `BIGFILE` és `SMALLFILE` típusú.
 ## 139. Jellemezd a szegmenseket és az extents-t! (2 pont)
+- 01_Oracle_architecture.pdf 12. oldal
+- Extens
+  - Adott számú folytonos adatblokk, ami valamilyen specifikus információt tárol, alkot egy extenst
+  - Ha egy extens megtelik, a motor újat hoz létre a szegmensben
+  - Amikor létrejön egy tábla a motor lefoglal egy initial extent-et.
+    - Ha az initial betelik incremental extenseket foglal, ami ugyanakkora vagy nagyobb mint az initial.
+  - Minden szegmens header-je tartalmaz egy térképet az extenseiről.
+  - Az initial extent mérete és hogy hány extens tartozhat egy táblához, az beállítható
+  - Az extensek mérete egy táblatérben lehet egyforma, vagy megadható, hogy a motor döntse el
+  - Új extens létrehozásakor a motor végignézi az adatfájlokat, hogy van-e hely az új extensnek.
+    - Ha talál, megnézi az adatfájl bitmapját, hogy be tudja-e illeszteni a szükséges blokkokat, ha nem ugrik a következőre
+- Szegmens
+  - A szegmens extensek halmaza, amik valamilyen specifikus információt tartalmaznak, és amik azonos táblatérhez tartoznak.
+  - Extensenként történik a helyfoglalás
+    - Egy szegmens extensei már nem feltétlen összfüggően vannak tárolva a lemezen.
+  - Minden szegmens egy táblatérhez tartozik
+  - Egy táblatéren belül lehet több fájl is (a szegmens átnyúlhat)
+    - Minden extens, csak egy fájlhoz tartozhat.
+  - Tábla vagy index létrehozásakor a motor szegmenseket allokál az adatoknal
+  - Táblaszegmens:
+    - Egy nem particionált vagy clustered tábla minden adata
+    - Egy particionált tábla egy partíciója
+    - Egy tábla cluster
+  - Index szegmens:
+    - Nem particionált indexek esetén maga az index
+    - Particionált esetben partíciónként van egy szegmens
+  - Temporary segment: temp fájloknak
+  - Undo segment: helyreállításhoz
 
 ## 140. A legjobb válaszidő mit optimalizál? (2 pont)
 
