@@ -881,15 +881,13 @@ Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
 - Az ilyen adatot résesen kell kezelni, vagyis az adatblokk elején tárolni kell egy résjegyzéket arról, hogy az egyes rések hol kezdődnek és meddig tartanak.
 
 ## 134. Jellemezd a blokk tábla könyvtárat Oracle esetén! (1 pont)
-- A táblakönyvtár arról a tábláról tartalmaz információkat, amihez az adott blokk tartozik
+- A táblakönyvtár arról a tábláról tartalmaz információkat, amihez az adott blokk tartozik.
+- A blokk fejlécében található.
 
-## 135. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek balról jobbra (a) kiértékelésénél milyen költségek összege lesz a teljes költség, és mennyi a teljes költség? (5 pont)
-
-- Az 1. join költsége B + T*B/I plusz
-- Az 1. join kiírása (output mérete): 2TB/I plusz
-- A 2. join költsége 2TB/I +[(T<sup>2</sup> /I)*B]/I plusz
-- A teljes output kiírása: 3T<sup>2</sup> B/I<sup>2</sup>
-- (a) végeredménye: B + 5TB/I + 4 T<sup>2</sup> B/I<sup>2</sup>
+## 135. Jellemezd a blokk rekord könyvtárat Oracle esetén! (2 pont)
+- 02_fizika.pdf 35. oldal
+- A Row Directory az adatblokkban tárolt sorról tartalmaz információt, mint pl. annak a pontos címe.
+- Ha sorokat törlünk, akkor a motor ezt a row directoryban lévő helyet nem szabadítja fel, csak akkor, ha új sort írunk a blokkba.
 
 ## 136. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek balról jobbra (b) kiértékelésénél mennyit lehet megspórolni és mennyi a teljes költség? (5 pont)
 
