@@ -880,9 +880,8 @@ Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
 - A tábla definíciója eleve változó hosszúságú mezőket tartalmaz.
 - Az ilyen adatot résesen kell kezelni, vagyis az adatblokk elején tárolni kell egy résjegyzéket arról, hogy az egyes rések hol kezdődnek és meddig tartanak.
 
-## 134. Az R(A,B) JOIN S(B,C) lekérdezés eredménye hány blokkból áll? (2 pont)
-
-(T<sub>R</sub>B<sub>S</sub> + T<sub>S</sub>B<sub>R</sub>) / I
+## 134. Jellemezd a blokk tábla könyvtárat Oracle esetén! (1 pont)
+- A táblakönyvtár arról a tábláról tartalmaz információkat, amihez az adott blokk tartozik
 
 ## 135. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek balról jobbra (a) kiértékelésénél milyen költségek összege lesz a teljes költség, és mennyi a teljes költség? (5 pont)
 
