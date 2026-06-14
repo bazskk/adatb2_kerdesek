@@ -901,12 +901,12 @@ Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
 - A blokknál eredetileg is hosszabb rekordokat láncolva tárolja.
 - Ha módosítás hatására nő túl a blokkon az adat, akkor a motor migrálja a sort. Ekkor a `ROWID` ugyanaz marad, az adat egy új, nagyobb blokkba kerül, a régi blokk viszont megmarad, és egy pointer kerül bele az új blokkra.
 
-## 138. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek c) és b) kiértékelésének költségei hogy aránylanak egymáshoz, és milyen feltétel szükséges ehhez? (2 pont)
-
-Ha a c/b arányt tekintjük, akkor azt mondhatjuk, hogy ez az arány ¾-hez tart,
-ha T/I tart a végtelenbe. Vagyis ha T/I elég nagy, akkor a c költsége nagyjából
-¾-e a b-nek.
-
+## 138. Jellemezd a táblatereket! (2 pont)
+- 01_Oracle_achitechture.pdf 11-12. oldal
+- Az adattárolás legnagyobb logikai egysége.
+- Egy táblatér egy vagy több adatfájlból áll, de mindegyik adatfájl csak egy táblatérhez tartozhat.
+- Mindig kell legyen egy `SYSTEM` és egy `SYSAUX` táblatér, illetve opcionálisan egy `TEMP` is
+- Egy táblatér lehet `BIGFILE` és `SMALLFILE` típusú.
 ## 139. Jellemezd a szegmenseket és az extents-t! (2 pont)
 
 ## 140. A legjobb válaszidő mit optimalizál? (2 pont)
