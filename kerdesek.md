@@ -847,9 +847,11 @@ Az alábbi adatbázis műveletekhez szükséges a rendezés:
 - Írás során frissíteni kell a paritásbitet
 - Bármelyik lemez hibásodik meg az a többi alapján helyreállítható (de csak egy lemez)
 
-## 130. Több-tagú összekapcsolás suboptimális sorrendjét milyen algoritmussal lehet előállítani, és a tartalmazási hálón milyen irányban halad a kiértékelés? (2 pont)
-
-- Selinger algoritmus, lentről felfele
+## 130. Mi jellemzi az 5. szintű RAID-t? (2 pont)
+- 02_fizika.pdf 19. oldal
+- A RAID4 problémája, hogy a paritáslemezt sokkal jobban nyírja mint az adatlemezeket.
+- RAID5 esetén a paritásbiteket nem egy dedikált lemezen tároljuk, hanem szétdobjuk az összes lemez között.
+- `n` db lemezt feltéve az `j` lemez `i` sávja akkor paritás, ha `j % (n+1) == j` 
 
 ## 131. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek melyik három kiértékelését hasonlítottuk össze, és melyik volt a legjobb ezek közül? (4 pont)
 
