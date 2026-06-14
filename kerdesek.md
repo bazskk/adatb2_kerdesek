@@ -830,15 +830,10 @@ Az alábbi adatbázis műveletekhez szükséges a rendezés:
 
 - {A}, sem R-nek, sem S-nek nem kulcsa
 
-## 127. Mi a szabályos zárójelezések számának rekurzív képlete? (2 pont)
+## 127. A legjobb átfutás mit optimalizál? (2 pont)
 
-nEquivalent to number of ways to parenthesize n-way joins
-
-nRecurrence: T(1) = 1
-
-T(n) = &Sigma; T(i)T(n-i)
-
-T(6) = 42
+- Legjobb átfutás: minden sort minél hamarabb
+- Először számoljon, aztán gyorsan térjen vissza
 
 ## 128. Mennyi n tagú Join fa van? (2 pont)
 
@@ -916,10 +911,7 @@ Ha a c/b arányt tekintjük, akkor azt mondhatjuk, hogy ez az arány ¾-hez tart
 ha T/I tart a végtelenbe. Vagyis ha T/I elég nagy, akkor a c költsége nagyjából
 ¾-e a b-nek.
 
-## 139. A legjobb átfutás mit optimalizál? (2 pont)
-
-- Legjobb átfutás: minden sort minél hamarabb
-- Először számoljon, aztán gyorsan térjen vissza
+## 139. Jellemezd a szegmenseket és az extents-t! (2 pont)
 
 ## 140. A legjobb válaszidő mit optimalizál? (2 pont)
 
