@@ -889,10 +889,12 @@ Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
 - A Row Directory az adatblokkban tárolt sorról tartalmaz információt, mint pl. annak a pontos címe.
 - Ha sorokat törlünk, akkor a motor ezt a row directoryban lévő helyet nem szabadítja fel, csak akkor, ha új sort írunk a blokkba.
 
-## 136. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek balról jobbra (b) kiértékelésénél mennyit lehet megspórolni és mennyi a teljes költség? (5 pont)
-
-- 2 * (2T*B/I)
-- (b) végeredménye: B + TB/I + 4 T<sup>2</sup> *B/I<sup>2</sup>
+## 136. Mikor használja a blokk a szabad területet Oracle esetén? (2 pont)
+- 02_fizika.pdf 35. oldal
+- A motor a következő esetekben használja a blokk elején lévő szabad területet:
+  - Módosításnál
+  - Új sorok beszúrásánál
+  - Tranzakciók a sorok lockolására.
 
 ## 137. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek c) kiértékelésénél (középső ténytáblához indexek alapján kapcsoljuk a dimenziótáblákat) milyen költségek összege lesz a teljes költség, és mennyi a teljes költség? (4 pont)
 
