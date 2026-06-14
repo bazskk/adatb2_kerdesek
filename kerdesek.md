@@ -853,13 +853,20 @@ Az alábbi adatbázis műveletekhez szükséges a rendezés:
 - RAID5 esetén a paritásbiteket nem egy dedikált lemezen tároljuk, hanem szétdobjuk az összes lemez között.
 - `n` db lemezt feltéve az `j` lemez `i` sávja akkor paritás, ha `j % (n+1) == j` 
 
-## 131. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek melyik három kiértékelését hasonlítottuk össze, és melyik volt a legjobb ezek közül? (4 pont)
+## 131. Mi jellemzi az 6. szintű RAID-t? (3 pont)
+- 02_fizika.pdf 20-21. oldal
+- 2<sup>r</sup>-1 lemez esetén `r` db redundáns lemezünk van a maradék 2<sup>r</sup>-1-r  pedig az adatlemez.
+- Az adatlemezek közül 2<sup>r</sup>-r-2 lemez van összefogva egy paritáslemezzel RAID4-be (legalábbis a slideok szerint)
+- Pl.:
 
-1. balról jobbra
-2. balról jobbra és a memóriában összekapcsolva a harmadik táblával
-3. a középső ténytábla soraihoz kapcsolva a szélső dimenziótáblákat.
+| 1 | 2 | 3 | 4 || 5 | 6 | 7 |
+| - | - | - | - || - | - | - |
+| A | A | A | X || P | X | X |
+| A | A | X | A || X | P | X |
+| A | X | X | A || X | X | X |
 
-- A fentiek közül a 3. volt a leghatékonyabb.
+Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
+- Ez két disk halálát is kibírja.
 
 ## 132. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek három kiértékelésénél milyen indexeket tételeztünk fel? (2 pont)
 
