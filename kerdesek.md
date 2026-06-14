@@ -859,11 +859,11 @@ Az alábbi adatbázis műveletekhez szükséges a rendezés:
 - Az adatlemezek közül 2<sup>r</sup>-r-2 lemez van összefogva egy paritáslemezzel RAID4-be (legalábbis a slideok szerint)
 - Pl.:
 
-| 1 | 2 | 3 | 4 || 5 | 6 | 7 |
-| - | - | - | - || - | - | - |
-| A | A | A | X || P | X | X |
-| A | A | X | A || X | P | X |
-| A | X | X | A || X | X | X |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+| - | - | - | - | - | - | - |
+| A | A | A | X | P | X | X |
+| A | A | X | A | X | P | X |
+| A | X | X | A | X | X | X |
 
 Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
 - Ez két disk halálát is kibírja.
