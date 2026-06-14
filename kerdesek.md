@@ -835,20 +835,17 @@ Az alábbi adatbázis műveletekhez szükséges a rendezés:
 - Legjobb átfutás: minden sort minél hamarabb
 - Először számoljon, aztán gyorsan térjen vissza
 
-## 128. Mennyi n tagú Join fa van? (2 pont)
+## 128.  Mi jellemzi az 1. szintű RAID-t? (2 pont)
+- 02_fizika.pdf 16. oldal
+- RAID 1 használata során tükrözzük a lemezeket
+- Azonos az adat és a redundáns lemezek száma
 
-- `T(n)*n!`, ahol `T(n)` az `n` elem szabályos zárójelezéseinek száma
-
-## 129. 5 tagú összekapcsolás sorrendjének legjobb tervét dinamikus programozási elvet alkalmazva hogyan számoljuk ki? (3 pont)
-
-```
-nBestPlan(A,B,C,D,E) = min of (
-BestPlan(A,B,C,D) |X| E,
-BestPlan(A,B,C,E) |X| D,
-BestPlan(A,B,D,E) |X| C,
-BestPlan(A,C,D,E) |X| B,
-BestPlan(B,C,D,E) |X| A )
-```
+## 129. Mi jellemzi az 4. szintű RAID-t? (2 pont)
+- 02_fizika.pdf 17. oldal
+- Egy redundáns lemezt használunk.
+- A redundáns lemez egy adott blokkjának minden egyes bitje az adatlemezek azonos blokkjában lévő bitek paritásbitje.
+- Írás során frissíteni kell a paritásbitet
+- Bármelyik lemez hibásodik meg az a többi alapján helyreállítható (de csak egy lemez)
 
 ## 130. Több-tagú összekapcsolás suboptimális sorrendjét milyen algoritmussal lehet előállítani, és a tartalmazási hálón milyen irányban halad a kiértékelés? (2 pont)
 
