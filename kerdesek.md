@@ -868,25 +868,17 @@ Az alábbi adatbázis műveletekhez szükséges a rendezés:
 Ahol minden sorban 3 `A` adatlemezhez tartozik egy `P` paritáslemez.
 - Ez két disk halálát is kibírja.
 
-## 132. A Q(A,B) JOIN R(B,C) JOIN S(C,D) lekérdezésnek három kiértékelésénél milyen indexeket tételeztünk fel? (2 pont)
+## 132. Hogyan osszuk el a rekordokat lapokra? (2 pont)
+- 02_fizika.pdf 33. oldal
+- A lapszervezés azt határozza meg, hogy osszuk el a rekordokat az adatblokkokban.
+- Átnyúlás nélkül: Egy rekordnak teljesen bele kell férnie egy blokkba, ha az új adat nem fér bele egy már megkezdett blokkba, akkor az a blokk üresen marad, és új blokkot nyitunk.
+- Átnyúlásos szervezés: Egy rekord több blokkra is kiterjedhet. Erre akkor van szükség, ha egy blokk méretét meghaladja a tárolni kívánt adat, vagy ha lecserélünk egy sort és már nem tudjuk visszaírni.
 
-- Feltesszük, hogy `Q`, `R`, `S` paraméterei megegyeznek, `Q.B`-re és `S.C`-re
-  klaszterindexünk van.
+## 133. 133. Mikor van változó hosszú rekord fájlunk? (1 pont)
 
----
-
-## A további pár kérdésnél használt jelölések:
-
-- `T`: Sorok száma az alsó indexben lévő relációban
-- `B`: Az alsó indexben lévő reláció által foglalt tárméret blokkokban
-- `I`: Az alsó indexben lévő oszlop képmérete, azaz az oszlop lehetséges
-  értékeinek száma
-
----
-
-## 133. Az R(A,B) JOIN S(B,C) lekérdezés eredményében mennyi a sorok száma? (2 pont)
-
-T<sub>R</sub> |X| S = T<sub>R</sub> * T<sub>S</sub> / I
+- Több tábla van egy közös fájlban
+- A tábla definíciója eleve változó hosszúságú mezőket tartalmaz.
+- Az ilyen adatot résesen kell kezelni, vagyis az adatblokk elején tárolni kell egy résjegyzéket arról, hogy az egyes rések hol kezdődnek és meddig tartanak.
 
 ## 134. Az R(A,B) JOIN S(B,C) lekérdezés eredménye hány blokkból áll? (2 pont)
 
